@@ -1,0 +1,183 @@
+[
+  {
+    "id": "1",
+    "name": "Angel Falls, Venezuela",
+    "url": "https://media.cntraveler.com/photos/5cb63a087b743b471660a8da/master/w_1920%2Cc_limit/Angel-Falls-Venezuela_GettyImages-165513023.jpg",
+    "description": "Venezuela overflows with natural wonders, including the world's highest waterfall: the 3,212-foot cascades of Angel Falls, located in the UNESCO-protected Canaima National Park. Canaima is by far the country's most popular attraction, and the falls stretch an astounding 19 times higher than Niagara Falls. Bonus: Pixar animators used the location as inspiration for Paradise Falls in Up—so you know it's good.",
+    "rating": 1.5
+  },
+  {
+    "id": "2",
+    "name": "Antelope Canyon, Arizona",
+    "url": "https://media.cntraveler.com/photos/5eb41692e1082306007a1d87/master/w_1920%2Cc_limit/Antelope-Canyon-GettyImages-162813219.jpg",
+    "description": "Antelope Canyon is a slot canyon (and serious Instagram darling) in the American Southwest. Its Navajo name translates to “the place where water runs through rocks”—an allusion to the canyon’s creation through erosion. The narrow, undulating spaces between rock formations allow for vivid patterns when sunlight filters through the striated stone."
+  },
+  {
+    "id": "3",
+    "name": "Arashiyama Bamboo Grove, Japan",
+    "url": "https://media.cntraveler.com/photos/5cb63a091a7e70293bf7094b/master/w_1920%2Cc_limit/Arashiyama-Japan_GettyImages-687644524.jpg",
+    "description": "Every traveler should experience the ethereal glow and seemingly endless heights of this bamboo grove on the outskirts of Kyoto. The experience even extends beyond the visual realm: In 1996, Japan's Ministry of the Environment included the sounds here—wood creaking, leaves rustling—as one of the top 100 Soundscapes of Japan."
+  },
+  {
+    "id": "4",
+    "name": "Atacama Desert, Chile",
+    "url": "https://media.cntraveler.com/photos/60595d5e8f4452dac88c59f0/master/w_1920%2Cc_limit/Atacama-Desert-Chile-GettyImages-175189565.jpg",
+    "description": "Have you ever dreamed of exploring the moon? A trip to Valle de la Luna in Chile’s Atacama Desert is a much shorter flight. Years of erosion have left behind jagged peaks, dry riverbeds, and a landscape startlingly similar to that of our favorite celestial body."
+  },
+  {
+    "id": "5",
+    "name": "Avenue of the Baobabs, Madagascar",
+    "url": "https://media.cntraveler.com/photos/5cb63e5611a45ee15630373e/master/w_1920%2Cc_limit/Baobabs_GettyImages-889836156.jpg",
+    "description": "Separated from continental Africa by 250 miles of water, Madagascar is the greatest adventure to add to your list. The island nation's secrets include giant moths, bug-eyed lemurs, and places like the surreal Avenue of the Baobabs, where the centuries-old trees reach heights of nearly 100 feet."
+  },
+  {
+    "id": "6",
+    "name": "The Azores, Portugal",
+    "url": "https://media.cntraveler.com/photos/60595e75c685cfec854722a8/master/w_1920%2Cc_limit/Azores-GettyImages-1183442594.jpg",
+    "description": "Roughly 900 miles off the coast of Lisbon, this Portuguese archipelago can inspire wanderlust with a single photo. The verdant valleys, steep ocean-side cliffs, rows of blue hydrangeas, and scattering of waterfalls make the Azores a paradise worth exploring—just make sure you visit before everyone you know beats you to it."
+  },
+  {
+    "id": "7",
+    "name": "Banff National Park, Canada",
+    "url": "https://media.cntraveler.com/photos/5cb63a0bc131b962ade953ad/master/w_1920%2Cc_limit/Banff-Canada_GettyImages-680900749.jpg",
+    "description": "Easily one of the most beautiful spots in Canada, Banff National Park overwhelms with views of the Canadian Rockies and a regular cast of wildlife. The park is also known for its abundance of beautiful lakes, including Lake Louise, Moraine Lake, and glacial Lake Minnewanka—each more pristine than the last."
+  },
+  {
+    "id": "8",
+    "name": "Boracay, Philippines",
+    "url": "https://media.cntraveler.com/photos/60595fbeaa174d1449ef6899/master/w_1920%2Cc_limit/Boracay-GettyImages-657020958.jpg",
+    "description": "With its gentle coastlines and transporting sunsets, it's easy to see why Boracay was voted one of the best islands in the world by our readers. Unfortunately, it's become overtouristed—the island closed for rehabilitation several years ago to compensate for overcrowding and unregulated development; it's since reopened to a limited number of visitors per day."
+  },
+  {
+    "id": "9",
+    "name": "Boulders Beach, South Africa",
+    "url": "https://media.cntraveler.com/photos/605960f58f4452dac88c59f2/master/w_1920%2Cc_limit/BouldersBeach-GettyImages-467972626.jpg",
+    "description": "Located on the False Bay Coastline, about 17 miles south of Table Mountain, Boulders Beach shows off the famously beautiful landscapes of Cape Town (one of the most beautiful cities in the world)—bright blue water, granite boulders, and even penguins. Many people swim here just a few feet away from the adorable African penguin community, but feel free to just sit back and admire the beautiful coastline as well."
+  },
+  {
+    "id": "10",
+    "name": "Cabo San Lucas, Mexico",
+    "url": "https://media.cntraveler.com/photos/5cb63a0a515ac842773761a9/master/w_1920%2Cc_limit/Baja-Sur-Cabo-San-Lucas-Mexico_GettyImages-988332844.jpg",
+    "description": "Home to 67 national parks, more than 5,000 miles of coastline, and landscapes ranging from deserts to snow-capped volcanoes, Mexico is so much more than the stuff of spring break clichés. Case in point: Cabo San Lucas. Venture outside of your all-inclusive resort to experience the region's turquoise waters, marine life, and iconic Arch of Cabo San Lucas, standing where the Gulf of California meets the Pacific Ocean."
+  },
+  {
+    "id": "11",
+    "name": "Cliffs of Moher, Ireland",
+    "url": "https://media.cntraveler.com/photos/5cb63a163bf1dc1649de9aab/master/w_1920%2Cc_limit/Cliffs-of-Moher-Ireland_GettyImages-165186543.jpg",
+    "description": "Few places exemplify the raw, untamed beauty of Ireland’s west coast like this natural wonder, which tops 702 feet at the highest point. And while you might know them better as the Cliffs of Insanity from The Princess Bride (inconceivable!), in reality, the cliffs are located just south of Galway."
+  },
+  {
+    "id": "12",
+    "name": "Greenland",
+    "url": "https://media.cntraveler.com/photos/6059625cf490bda87b43e0a5/master/w_1920%2Cc_limit/Greenland-GettyImages-973974214.jpg",
+    "description": "Greenland is icy, mysterious, and one of the most naturally beautiful places on the planet. The world's biggest non-continental island is so much more than glaciers, too (although the glaciers are spectacular)—think magnificent fjords, colorful villages, fields of sheep, and that ever-alluring midnight sun."
+  },
+  {
+    "id": "13",
+    "name": "Halong Bay, Vietnam",
+    "url": "https://media.cntraveler.com/photos/605966677ef97a43a1af2c95/master/w_1920%2Cc_limit/HalongBay-GettyImages-938718364.jpg",
+    "description": "Halong Bay, located in northeast Vietnam, is beloved for its blue waters and spread of limestone islands, all occupied by tropical trees and wildlife. Board a Chinese junk boat to experience the beauty—and associated myths and stories—of the mist-shrouded emerald basin for yourself."
+  },
+  {
+    "id": "14",
+    "name": "Isle of Skye, Scotland",
+    "url": "https://media.cntraveler.com/photos/605967821b01d7e74b70528d/master/w_1920%2Cc_limit/IsleOfSkye-GettyImages-1160979608.jpg",
+    "description": "With fairy pools and endless undulations of hills, the magical Isle of Skye is the stuff dreams are made of (regardless of whether you've binge-watched Outlander yet). While the nature here is timeless, the island also has a food scene that's totally modern—we can't think of a more beautiful place to sample Michelin-starred cuisine."
+  },
+  {
+    "id": "15",
+    "name": "Lake Baikal, Russia",
+    "url": "https://media.cntraveler.com/photos/5eb1cdeafc043ed5d9779739/master/w_1920%2Cc_limit/Lake-Baikal-GettyImages-525367288.jpg",
+    "description": "The oldest and deepest lake on earth—it reaches a depth of one mile in some spots—is also home to our planet's only freshwater seals. Come winter, the lake transforms into a wonderland, with jagged ice caves encircling what amounts to the world's largest ice skating rink."
+  },
+  {
+    "id": "16",
+    "name": "Lake Tekapo, New Zealand",
+    "url": "https://media.cntraveler.com/photos/5ea9df8f52e4f366e67c3de5/master/w_1920%2Cc_limit/Lake-Tekapo-lupins-GettyImages-465993201.jpg",
+    "description": "While purple, pink, and blue-hued lupin flowers may not be native to New Zealand (they hail from North America), they really do seem to bloom most vibrantly on the Oceanian nation's South Island. At Lake Tekapo, in particular, the flowers juxtapose against the backdrop of the crystal clear water to create one of the country's most stunning vistas."
+  },
+  {
+    "id": "17",
+    "name": "Laguna Colorada, Bolivia",
+    "url": "https://media.cntraveler.com/photos/5eb1cde0e053a5e6f0fd0c06/master/w_1920%2Cc_limit/Laguna-Colorada-GettyImages-577296437.jpg",
+    "description": "If you haven't heard of the Faroe Islands, you will soon. With its grass-roofed houses, rocky coastlines, and abundance of puffins, the self-governed group of 18 volcanic islands is basically one giant photo op. Mulafossur Waterfall might be the archipelago's most famous site—the cascade is like something from a fantasy novel, falling over the rocky cliffs of Vagar Island to the ocean below, with the green hills of Gásadalur village as a backdrop."
+  },
+  {
+    "id": "18",
+    "name": "Lençóis Maranhenses National Park, Brazil",
+    "url": "https://media.cntraveler.com/photos/5cf8303ea6ea3464d910f674/master/w_1920%2Cc_limit/lencois-maranhenses_GettyImages-495845477.jpg",
+    "description": "The geography of Brazil's Lençóis Maranhenses National Park is like nothing else on earth. The rainy season (around early June) fills every trough with water and the world becomes an M.C. Escher print: It is either a drowned desert or a sandy lake, depending on how the mind's eye frames what it is seeing."
+  },
+  {
+    "id": "19",
+    "name": "Machu Picchu, Peru",
+    "url": "https://media.cntraveler.com/photos/5cb63a273bf1dc125ade9aaf/master/w_1920%2Cc_limit/Machu-Picchu-Peru_GettyImages-109401484.jpg",
+    "description": "While the intricate stone ruins of Machu Picchu are the work of 15th-century Inca rulers, not Mother Nature, it's the site's natural setting that makes it even more alluring. Perched atop the flattened peak of a mountain, the ancient Wonder of the World benefits from the famous backdrop of Huayna Picchu, lush green surfaces, and a barrier of Andean peaks that, despite the landmark's fame, makes you feel like you've stumbled upon a secret."
+  },
+  {
+    "id": "20",
+    "name": "Milford Sound, New Zealand",
+    "url": "https://media.cntraveler.com/photos/605969ea7b588da524cfef48/master/w_1920%2Cc_limit/MilfordSound-GettyImages-503158728.jpg",
+    "description": "New Zealand is no stranger to breathtaking landscapes, particularly on the west coast of the South Island. Case in point: Milford Sound, a mountainous fjord where you can live out all of your Lord of the Rings fantasies."
+  },
+  {
+    "id": "21",
+    "name": "Mount Fuji, Japan",
+    "url": "https://media.cntraveler.com/photos/60596b398f4452dac88c59f8/master/w_1920%2Cc_limit/MtFuji-GettyImages-959111140.jpg",
+    "description": "It's hard to pick the single most beautiful place in Japan, but 12,388-foot Mount Fuji just might take the prize. Visit Lake Kawaguchiko in the spring for some of the best views of the mountain and cherry blossom trees—a postcard-worthy sight if we ever saw one. Or if you're an avid hiker, plan a trip for mid-July until the end of August, when the snow melts enough to allow access to Fuji's summit."
+  },
+  {
+    "id": "22",
+    "name": "Mount Kilimanjaro, Tanzania",
+    "url": "https://media.cntraveler.com/photos/60596bca7ef97a43a1af2c99/master/w_1920%2Cc_limit/Kilimanjaro-GettyImages-1249566598.jpg",
+    "description": "Africa's highest peak seems more striking than a lot of other famous mountains, because it's an ancient stratovolcano that's not part of any mountain range. That means the 19,000-foot summit drops down to vast, flat plains on all sides, making it a mirage-like blip on Tanzania's widespread topography. As an added bonus, the peak requires no technical mountaineering skills to summit, so even novice hikers can cross this item off their bucket lists."
+  },
+  {
+    "id": "23",
+    "name": "Namib Desert, Namibia",
+    "url": "https://media.cntraveler.com/photos/5cb63a2d7b743ba94b60a8e0/master/w_1920%2Cc_limit/Namib-Desert%2C-Namibia_GettyImages-139814922.jpg",
+    "description": "With its otherworldly landscapes and isolated luxury lodges—not to mention populations of rhinos, giraffes, and elephants—Namibia is like nowhere else on Earth. In fact, its red sand dunes and skeletal trees might make you think you've been transported to Mars instead of southwest Africa."
+  },
+  {
+    "id": "24",
+    "name": "Na Pali Coast, Hawaii",
+    "url": "https://media.cntraveler.com/photos/5cb63a2b1a7e7018aef70957/master/w_1920%2Cc_limit/Na-Pali-Coast_GettyImages-1124504102.jpg",
+    "description": "Kauai has one of the world's most gorgeous coastlines, with towering waterfalls and isolated crescent beaches. Just be prepared to put in a little effort to soak up its wonders: Na Pali can only be seen from a helicopter, catamaran, or a rather grueling hike."
+  },
+  {
+    "id": "25",
+    "name": "Okavango Delta, Botswana",
+    "url": "https://media.cntraveler.com/photos/5cb63a2b515ac81ada3761ab/master/w_1920%2Cc_limit/Okavango-Delta--Botswana_GettyImages-582006227.jpg",
+    "description": "The lush Okavango Delta—a 49-million acre river delta in northern Botswana—is like a real-world eden, where cheetahs, zebras, buffalo, and rhinos roam freely. Visit during Africa's winter (our summer), after the rains when the delta floods: The savanna’s grasses are low, while growth along the waterways attracts tons of wildlife."
+  },
+  {
+    "id": "26",
+    "name": "Pamukkale, Turkey",
+    "url": "https://media.cntraveler.com/photos/60596c447ef97a43a1af2c9b/master/w_1920%2Cc_limit/Pamukkale-GettyImages-1223155251.jpg",
+    "description": "The 17 tiered pools of Pamukkale cotton castle in Turkish are as beautiful as hot springs get. The stacks of white travertine (a form of limestone) overlook the city of Denizli, and the still 94-degree Fahrenheit waters perfectly reflect the cerulean Aegean sky."
+  },
+  {
+    "id": "27",
+    "name": "The Pitons, St. Lucia",
+    "url": "https://media.cntraveler.com/photos/5b1fe5b89301f42863770641/master/w_1920%2Cc_limit/St-Lucia_GettyImages-166565984.jpg",
+    "description": "If you haven't heard of the Faroe Islands, you will soon. With its grass-roofed houses, rocky coastlines, and abundance of puffins, the self-governed group of 18 volcanic islands is basically one giant photo op. Mulafossur Waterfall might be the archipelago's most famous site—the cascade is like something from a fantasy novel, falling over the rocky cliffs of Vagar Island to the ocean below, with the green hills of Gásadalur village as a backdrop."
+  },
+  {
+    "id": "28",
+    "name": "Playa de Las Catedrales, Spain",
+    "url": "https://media.cntraveler.com/photos/60596d3b8f4452dac88c59fa/master/w_1920%2Cc_limit/Playa-de-las-Catedrales-GettyImages-1302661563.jpg",
+    "description": "As a destination on Europe's Iberian Peninsula, Spain is renowned for its island paradises and semi-remote sand beaches. We're particularly big fans of Playa de Las Catedrales, a small stretch of sand on the Galician coast where natural stone arches form a walkable cathedral at low tide."
+  },
+  {
+    "id": "29",
+    "name": "Plitvice Lakes National Park, Croatia",
+    "url": "https://media.cntraveler.com/photos/5cb63a4a515ac847de3761ad/master/w_1920%2Cc_limit/Plitvice-Lakes-National-Park-Croatia_GettyImages-609917794.jpg",
+    "description": "If you can make it through the crowds of selfie-taking tourists, you'll discover that Plitvice Lakes National Park more than lives up to the hype. The 16 terraced lakes of Croatia's most popular site are connected by waterfalls and vary in shades of blue, creating an infinitely dazzling result."
+  },
+  {
+    "id": "30",
+    "name": "Provence, France",
+    "url": "https://media.cntraveler.com/photos/5cb63a261a7e702d60f70951/master/w_1920%2Cc_limit/Lavender-fields-Provence_GettyImages-680500373.jpg",
+    "description": "The seemingly endless stretches of lavender fields make Provence one of the prettiest (and best-smelling) places in France. Distilleries—where the essential oil from the flowers are bottled and used to make soaps, lotions, and creams—dot the area, but the multitude of fields featuring unreal violet views are the real pride of the region."
+  }
+]

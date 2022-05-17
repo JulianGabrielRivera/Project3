@@ -2,8 +2,6 @@
 
 const router = require('express').Router();
 
-const express = require('express');
-
 const bcrypt = require('bcryptjs');
 
 const jwt = require('jsonwebtoken');
@@ -15,7 +13,7 @@ const { isAuthenticated } = require('./../middleware/jwt.middleware.js');
 const saltRounds = 10;
 
 router.post('/signup', (req, res, next) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, role } = req.body;
   // Check if email or password or name are provided as empty string
   if (email === '' || password === '' || name === '') {
     res.status(400).json({ message: 'Provide email, password and name' });
@@ -47,15 +45,15 @@ router.post('/signup', (req, res, next) => {
 
       const hashedPassword = bcrypt.hashSync(password, salt);
 
-      return User.create({ email, password: hashedPassword, name });
+      return User.create({ email, password: hashedPassword, name, role });
     })
     .then((createdUser) => {
       // Deconstruct the newly created user object to omit the password
       // We should never expose passwords publicly
-      const { email, name, _id } = createdUser;
+      const { email, name, _id, role } = createdUser;
 
       // Create a new object that doesn't expose the password
-      const user = { email, name, _id };
+      const user = { email, name, _id, role };
 
       // Send a json response containing the user object
       res.status(201).json({ user: user });
@@ -82,11 +80,14 @@ router.post('/login', (req, res, next) => {
       const passwordCorrect = bcrypt.compareSync(password, foundUser.password);
 
       if (passwordCorrect) {
-        const { _id, email, name } = foundUser;
+        // parsing  id email and name // parsing out of founduser
+        const { _id, email, name, role } = foundUser;
 
         // Create an object that will be set as the token payload
-        const payload = { _id, email, name };
+        const payload = { _id, email, name, role };
+        // const payload = foundUser.toObject();
 
+        // token has the whole payload encrypted inside of it
         const authToken = jwt.sign(payload, process.env.TOKEN_SECRET, {
           algorithm: 'HS256',
           expiresIn: '6h',

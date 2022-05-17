@@ -1,0 +1,18 @@
+# POST http://localhost:5005/auth/signup
+# Content-Type: application/json
+
+# {
+
+#   "name": "julian",
+#   "email": "jjjjj@gmail.com",
+#   "password": "Password1"
+# }
+POST http://localhost:5005/auth/login
+Content-Type: application/json
+
+{
+
+ 
+  "email": "jjjjj@gmail.com",
+  "password": "Password1"
+}
