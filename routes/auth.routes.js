@@ -13,6 +13,7 @@ const { isAuthenticated } = require('./../middleware/jwt.middleware.js');
 const saltRounds = 10;
 
 router.post('/signup', (req, res, next) => {
+  // input name,pw,email
   const { name, email, password, role } = req.body;
   // Check if email or password or name are provided as empty string
   if (email === '' || password === '' || name === '') {
