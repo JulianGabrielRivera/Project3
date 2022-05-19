@@ -23,7 +23,7 @@ module.exports = (app) => {
   app.use(
     cors({
       credentials: true,
-      origin: 'https://scintillating-blancmange-d927b0.netlify.app',
+      origin: '*',
       // origin: process.env.FRONTEND_URL || 'http://localhost:3000',
     })
   );
