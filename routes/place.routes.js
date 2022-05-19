@@ -31,11 +31,10 @@ router.get('/places/:placeId', (req, res, next) => {
         model: 'User',
       },
     })
+
     .then((response) => {
       console.log(response);
-      // res.send(response);
-      // when we use postman we get console.log in our terminal
-      // response here so you can see it on postman
+      // how we give it to our front end with res.json
       // dont double nest, already an object
       res.json(response);
     })
