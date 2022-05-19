@@ -42,9 +42,9 @@ router.get('/places/:placeId', (req, res, next) => {
 });
 
 router.post('/places/create', isAuthenticated, checkAdmin, (req, res, next) => {
-  const { name, img, description, rating, continent } = req.body;
+  const { name, url, description, rating, continent } = req.body;
 
-  Place.create({ name, img, description, rating, comments: [], continent })
+  Place.create({ name, url, description, rating, comments: [], continent })
     .then((newPlace) => {
       console.log(newPlace);
       res.json({ message: 'success' });

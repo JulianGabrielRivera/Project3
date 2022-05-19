@@ -5,7 +5,7 @@ const { Schema, model } = mongoose;
 
 const placeSchema = new Schema({
   name: String,
-  img: String,
+  url: String,
   description: String,
   rating: Number,
   continent: String,
