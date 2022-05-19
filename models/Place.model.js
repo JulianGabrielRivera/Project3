@@ -8,6 +8,7 @@ const placeSchema = new Schema({
   img: String,
   description: String,
   rating: Number,
+  continent: String,
   comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
 });
 

@@ -28,10 +28,12 @@ router.post('/comments/:id', isAuthenticated, (req, res, next) => {
             { $push: { myComments: newComment._id } },
             { new: true }
           ).then(() => {
+            // puts newcomment to object
             let copyOfNewComment = newComment.toObject();
-
+            // object key prop author
             copyOfNewComment.author = { name: req.payload.name };
             console.log(copyOfNewComment);
+
             res.json(copyOfNewComment);
           });
         })

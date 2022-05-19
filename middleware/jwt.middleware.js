@@ -9,6 +9,7 @@ const isAuthenticated = jwtMiddleware({
   secret: process.env.TOKEN_SECRET,
   algorithms: ['HS256'],
   requestProperty: 'payload',
+  userProperty: 'user',
   getToken: getTokenFromHeaders,
 });
 

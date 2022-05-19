@@ -43,9 +43,9 @@ router.get('/places/:placeId', (req, res, next) => {
 });
 
 router.post('/places/create', isAuthenticated, checkAdmin, (req, res, next) => {
-  const { name, img, description, rating } = req.body;
+  const { name, img, description, rating, continent } = req.body;
 
-  Place.create({ name, img, description, rating, comments: [] })
+  Place.create({ name, img, description, rating, comments: [], continent })
     .then((newPlace) => {
       console.log(newPlace);
       res.json({ message: 'success' });
@@ -56,7 +56,7 @@ router.post('/places/create', isAuthenticated, checkAdmin, (req, res, next) => {
     });
 });
 
-router.delete('/places/:placeId', (req, res, next) => {
+router.delete('/places/:placeId', isAuthenticated, (req, res, next) => {
   const { placeId } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(placeId)) {
