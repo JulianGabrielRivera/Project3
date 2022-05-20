@@ -13,6 +13,11 @@ const userSchema = new Schema({
     enum: ['GUEST', 'ADMIN'],
     default: 'GUEST',
   },
+  // so idofplace can either be number or objectid
+  // onclick we change boolean value
+  placeLiked: [{ idOfThePlace: Number, isLiked: { default: false } }],
+
+  // placesILiked: { type: Number, default: 0 },
 });
 
 module.exports = model('User', userSchema);

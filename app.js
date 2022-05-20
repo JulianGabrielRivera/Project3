@@ -18,6 +18,7 @@ require('./config')(app);
 // Contrary to the views version, all routes are controlled from the routes/index.js
 
 // order matters for these
+
 const allRoutes = require('./routes/index.routes');
 app.use('/api', allRoutes);
 
@@ -30,6 +31,8 @@ app.use('/api', commentRoutes);
 const placeRoutes = require('./routes/place.routes');
 
 app.use('/api', placeRoutes);
+const likeRoutes = require('./routes/likes.routes');
+app.use('/api', likeRoutes);
 
 const userRoutes = require('./routes/user.routes');
 app.use('/api', isAuthenticated, userRoutes);

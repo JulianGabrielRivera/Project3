@@ -10,6 +10,7 @@ const placeSchema = new Schema({
   rating: Number,
   continent: String,
   comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
+  likes: { type: Number, default: 0 },
 });
 
 module.exports = model('Place', placeSchema);
