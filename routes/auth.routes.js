@@ -77,7 +77,7 @@ router.post('/signup', (req, res, next) => {
         subject: 'julian - verify your email',
         html: `<h2>${createdUser.name}! Thanks for registering on our site </h3>
         <h4> Please verify your mail to continue... </h4>
-        <a href="http://${req.headers.host}/verify-email?token=${createdUser.emailToken}"> Verify your Email </a>`,
+        <a href="http://${req.headers.host}/auth/verifyemail?token=${createdUser.emailToken}"> Verify your Email </a>`,
       };
 
       // send email
@@ -99,15 +99,16 @@ router.post('/signup', (req, res, next) => {
     .catch((err) => console.log(err));
 });
 
-router.get('/verify-email', (req, res) => {
+router.get('/verifyemail', (req, res) => {
   const token = req.query.token;
+  console.log(token);
 
   User.findOne({ emailToken: token })
     .then((userEmail) => {
       if (userEmail) {
         userEmail.emailToken = null;
         userEmail.isVerified = true;
-        res.redirect('/login');
+        res.send('yea');
       } else {
         res.redirect('/signup');
         console.log('email not verified');
