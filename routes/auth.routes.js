@@ -7,10 +7,20 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const User = require('../models/User.model');
+const crypto = require('crypto');
+const nodemailer = require('nodemailer');
 
 const { isAuthenticated } = require('./../middleware/jwt.middleware.js');
 
 const saltRounds = 10;
+
+let transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD,
+  },
+});
 
 router.post('/signup', (req, res, next) => {
   // input name,pw,email
@@ -46,18 +56,62 @@ router.post('/signup', (req, res, next) => {
 
       const hashedPassword = bcrypt.hashSync(password, salt);
 
-      return User.create({ email, password: hashedPassword, name, role });
+      return User.create({
+        email,
+        password: hashedPassword,
+        name,
+        role,
+        emailToken: crypto.randomBytes(64).toString('hex'),
+        isVerified: false,
+      });
     })
     .then((createdUser) => {
       // Deconstruct the newly created user object to omit the password
       // We should never expose passwords publicly
-      const { email, name, _id, role } = createdUser;
+      const { email, name, _id, role, emailToken, isVerified } = createdUser;
+      console.log(req.headers.host);
+      // send verification mail to user
+      let mailOptions = {
+        from: ' "Verify your email"<process.env.EMAIL> ',
+        to: createdUser.email,
+        subject: 'julian - verify your email',
+        html: `<h2>${createdUser.name}! Thanks for registering on our site </h3>
+        <h4> Please verify your mail to continue... </h4>
+        <a href="http://${req.headers.host}/verify-email?token=${createdUser.emailToken}"> Verify your Email </a>`,
+      };
+
+      // send email
+
+      transporter.sendMail(mailOptions, function (err, info) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('Verification email is sent to your gmail account');
+        }
+      });
 
       // Create a new object that doesn't expose the password
-      const user = { email, name, _id, role };
+      const user = { email, name, _id, role, emailToken, isVerified };
 
       // Send a json response containing the user object
       res.status(201).json({ user: user });
+    })
+    .catch((err) => console.log(err));
+});
+
+router.get('/verify-email', (req, res) => {
+  const token = req.query.token;
+
+  User.findOne({ emailToken: token })
+    .then((userEmail) => {
+      if (userEmail) {
+        userEmail.emailToken = null;
+        userEmail.isVerified = true;
+        res.redirect('/login');
+      } else {
+        res.redirect('/signup');
+        console.log('email not verified');
+      }
     })
     .catch((err) => console.log(err));
 });

@@ -7,6 +7,8 @@ const userSchema = new Schema({
   email: { type: String, unique: true, required: true },
   password: { type: String, required: true },
   name: { type: String, required: true },
+  emailToken: { type: String },
+  isVerified: { type: Boolean },
   myComments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
   role: {
     type: String,
@@ -15,7 +17,12 @@ const userSchema = new Schema({
   },
   // so idofplace can either be number or objectid
   // onclick we change boolean value
-  placeLiked: [{ idOfThePlace: Number, isLiked: { default: false } }],
+  places: [
+    {
+      idOfThePlace: { type: Schema.Types.ObjectId },
+      isLiked: { default: false },
+    },
+  ],
 
   // placesILiked: { type: Number, default: 0 },
 });
