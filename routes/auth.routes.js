@@ -11,6 +11,10 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 
 const { isAuthenticated } = require('./../middleware/jwt.middleware.js');
+const { OAuth2Client } = require('google-auth-library');
+const CLIENT_ID =
+  '478476523522-7ohmi0thf3t15l3fv8t9encbkg9p7d3j.apps.googleusercontent.com';
+const client = new OAuth2Client(CLIENT_ID);
 
 const saltRounds = 10;
 
@@ -108,7 +112,8 @@ router.get('/verifyemail', (req, res) => {
       if (userEmail) {
         userEmail.emailToken = null;
         userEmail.isVerified = true;
-        res.send('yea');
+        userEmail.save();
+        res.status(200).json({ verified: userEmail.isVerified });
       } else {
         res.redirect('/signup');
         console.log('email not verified');
@@ -158,6 +163,14 @@ router.post('/login', (req, res, next) => {
       console.log(err);
       res.status(500).json({ message: 'Internal Server Error' });
     });
+});
+
+router.get('logout', (req, res) => {
+  res.send('logging out');
+});
+router.get('/google', (req, res) => {
+  //handle with passport
+  res.send('logging in with google');
 });
 router.get('/verify', isAuthenticated, (req, res, next) => {
   // <== CREATE NEW ROUTE
