@@ -1,11 +1,11 @@
-const router = require('express').Router();
-const { checkAdmin } = require('./../middleware/roles.middleware');
+const router = require("express").Router();
+const { checkAdmin } = require("./../middleware/roles.middleware");
 
-const Place = require('../models/Place.model');
-const { isAuthenticated } = require('../middleware/jwt.middleware');
-const mongoose = require('mongoose');
+const Place = require("../models/Place.model");
+const { isAuthenticated } = require("../middleware/jwt.middleware");
+const mongoose = require("mongoose");
 
-router.get('/places', (req, res, next) => {
+router.get("/places", (req, res, next) => {
   // .find gets all the documents if we dont specify what we want.
   Place.find({})
     .then((allPlaces) => {
@@ -18,17 +18,17 @@ router.get('/places', (req, res, next) => {
     .catch((err) => console.log(err));
 });
 
-router.get('/places/:placeId', (req, res, next) => {
+router.get("/places/:placeId", (req, res, next) => {
   const { placeId } = req.params;
   // .find gets all the documents if we dont specify what we want.
   Place.findById(placeId)
 
-    .populate('comments')
+    .populate("comments")
     .populate({
-      path: 'comments',
+      path: "comments",
       populate: {
-        path: 'author',
-        model: 'User',
+        path: "author",
+        model: "User",
       },
     })
 
@@ -41,25 +41,34 @@ router.get('/places/:placeId', (req, res, next) => {
     .catch((err) => console.log(err));
 });
 
-router.post('/places/create', isAuthenticated, checkAdmin, (req, res, next) => {
-  const { name, url, description, rating, continent } = req.body;
-
-  Place.create({ name, url, description, rating, comments: [], continent })
+router.post("/places/create", isAuthenticated, checkAdmin, (req, res, next) => {
+  const { name, url, description, rating, continent, price } = req.body;
+  console.log(price, "hey");
+  console.log(name, "hey");
+  Place.create({
+    name,
+    url,
+    description,
+    rating,
+    comments: [],
+    continent,
+    price,
+  })
     .then((newPlace) => {
       console.log(newPlace);
-      res.json({ message: 'success' });
+      res.json({ message: newPlace });
     })
     .catch((err) => {
       console.log(err);
-      res.status(500).json({ message: 'Failed to create' });
+      res.status(500).json({ message: "Failed to create" });
     });
 });
 
-router.delete('/places/:placeId', isAuthenticated, (req, res, next) => {
+router.delete("/places/:placeId", isAuthenticated, (req, res, next) => {
   const { placeId } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(placeId)) {
-    res.status(400).json({ message: 'Specified id is not valid' });
+    res.status(400).json({ message: "Specified id is not valid" });
     return;
   }
 
