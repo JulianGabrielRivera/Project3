@@ -1,11 +1,11 @@
-const router = require('express').Router();
-const User = require('../models/User.model');
-const { isAuthenticated } = require('./../middleware/jwt.middleware.js');
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+const router = require("express").Router();
+const User = require("../models/User.model");
+const { isAuthenticated } = require("./../middleware/jwt.middleware.js");
+const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 const saltRounds = 10;
 
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 // router.get('/user', (req, res, next) => {
 //   const { userId } = req.params;
@@ -21,7 +21,7 @@ const jwt = require('jsonwebtoken');
 //     .catch((err) => console.log(err));
 // });
 
-router.get('/user', (req, res, next) => {
+router.get("/user", (req, res, next) => {
   // req.params is an object
   // const { userId } = req.params;
 
@@ -33,7 +33,7 @@ router.get('/user', (req, res, next) => {
       // copies user document then remove password
       const foundUserCopy = foundUser.toObject();
 
-      foundUserCopy.password = '';
+      foundUserCopy.password = "";
       // res.send(response);
       // when we use postman we get console.log in our terminal
       // response here so you can see it on postman
@@ -54,17 +54,17 @@ router.get('/user', (req, res, next) => {
 //     .catch((err) => console.log(err));
 // });
 
-router.put('/user', (req, res, next) => {
+router.put("/user", (req, res, next) => {
   const userId = req.payload._id;
   // const { userId } = req.params;
   // console.log(req.currentUser);
   const { name, email, password } = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(userId)) {
-    res.status(400).json({ message: 'Specified id is not valid' });
+    res.status(400).json({ message: "Specified id is not valid" });
     return;
   }
-  if (password !== '') {
+  if (password !== "") {
     const salt = bcrypt.genSaltSync(saltRounds);
 
     const hashedPassword = bcrypt.hashSync(password, salt);

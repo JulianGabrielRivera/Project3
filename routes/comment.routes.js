@@ -1,11 +1,11 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const Comment = require('../models/Comment.model');
-const Place = require('../models/Place.model');
-const User = require('../models/User.model');
-const { isAuthenticated } = require('./../middleware/jwt.middleware.js');
+const Comment = require("../models/Comment.model");
+const Place = require("../models/Place.model");
+const User = require("../models/User.model");
+const { isAuthenticated } = require("./../middleware/jwt.middleware.js");
 
-router.post('/comments/:id', isAuthenticated, (req, res, next) => {
+router.post("/comments/:id", isAuthenticated, (req, res, next) => {
   const { id } = req.params;
   const author = req.payload._id;
   console.log(req.payload._id);

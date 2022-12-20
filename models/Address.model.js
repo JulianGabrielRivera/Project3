@@ -25,6 +25,9 @@ const addressSchema = new Schema({
   zipCode: {
     type: Number,
   },
+  phoneNumber: {
+    type: Number,
+  },
 });
 
 const Address = mongoose.model("Address", addressSchema);

@@ -65,14 +65,17 @@ router.post("/signup", (req, res, next) => {
         password: hashedPassword,
         name,
         role,
+
         // emailToken: crypto.randomBytes(64).toString('hex'),
         // isVerified: false,
       });
     })
+
     .then((createdUser) => {
       // Deconstruct the newly created user object to omit the password
       // We should never expose passwords publicly
-      const { email, name, _id, role } = createdUser;
+      console.log(createdUser);
+      const { email, name, _id, role, places } = createdUser;
       // console.log(req.headers.host);
       // send verification mail to user
       // let mailOptions = {
@@ -95,7 +98,7 @@ router.post("/signup", (req, res, next) => {
       // });
 
       // Create a new object that doesn't expose the password
-      const user = { email, name, _id, role };
+      const user = { email, name, _id, role, places };
 
       // Send a json response containing the user object
       res.status(201).json({ user: user });
@@ -125,6 +128,8 @@ router.post("/signup", (req, res, next) => {
 
 router.post("/login", (req, res, next) => {
   // parsing the body from front end
+  console.log(req.session);
+
   const { email, password } = req.body;
   // Check if email or password are provided as empty string
   if (email === "" || password === "") {
@@ -143,10 +148,10 @@ router.post("/login", (req, res, next) => {
 
       if (passwordCorrect) {
         // parsing  id email and name // parsing out of founduser
-        const { _id, email, name, role } = foundUser;
+        const { _id, email, name, role, places } = foundUser;
 
         // Create an object that will be set as the token payload
-        const payload = { _id, email, name, role };
+        const payload = { _id, email, name, role, places };
         // const payload = foundUser.toObject();
 
         // token has the whole payload encrypted inside of it
@@ -182,7 +187,17 @@ router.get("/verify", isAuthenticated, (req, res, next) => {
 
   // Send back the object with user data
   // previously set as the token payload
+
   res.status(200).json(req.payload);
+});
+router.get("/getUserlikes", isAuthenticated, (req, res, next) => {
+  User.findById(req.payload._id)
+    .populate("places")
+    .then((userFound) => {
+      console.log(userFound, "hey");
+      res.json({ userFound });
+    })
+    .catch((err) => console.log(err));
 });
 
 module.exports = router;

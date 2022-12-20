@@ -12,6 +12,7 @@ const placeSchema = new Schema({
   comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
   likes: { type: Number, default: 0 },
   price: Number,
+  likedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
 });
 
 module.exports = model("Place", placeSchema);

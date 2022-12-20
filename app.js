@@ -11,6 +11,8 @@ const express = require("express");
 const { isAuthenticated } = require("./middleware/jwt.middleware");
 const app = express();
 
+require("./config/session.config")(app);
+
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
 
@@ -19,17 +21,15 @@ require("./config")(app);
 
 // order matters for these
 
-const allRoutes = require("./routes/index.routes");
-app.use("/api", allRoutes);
-
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
+const allRoutes = require("./routes/index.routes");
+app.use("/api", allRoutes);
 
 const commentRoutes = require("./routes/comment.routes");
 app.use("/api", commentRoutes);
 
 const placeRoutes = require("./routes/place.routes");
-
 app.use("/api", placeRoutes);
 const likeRoutes = require("./routes/likes.routes");
 app.use("/api", likeRoutes);

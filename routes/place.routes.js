@@ -4,12 +4,16 @@ const { checkAdmin } = require("./../middleware/roles.middleware");
 const Place = require("../models/Place.model");
 const { isAuthenticated } = require("../middleware/jwt.middleware");
 const mongoose = require("mongoose");
+const User = require("../models/User.model");
 
 router.get("/places", (req, res, next) => {
   // .find gets all the documents if we dont specify what we want.
   Place.find({})
     .then((allPlaces) => {
-      console.log(allPlaces);
+      // console.log(allPlaces);
+      console.log(req.session.email, "hiiii");
+      console.log(req.payload, "hiiii");
+
       // res.send(response);
       // when we use postman we get console.log in our terminal
       // response here so you can see it on postman
@@ -21,6 +25,7 @@ router.get("/places", (req, res, next) => {
 router.get("/places/:placeId", (req, res, next) => {
   const { placeId } = req.params;
   // .find gets all the documents if we dont specify what we want.
+  console.log(req.payload);
   Place.findById(placeId)
 
     .populate("comments")
@@ -53,6 +58,7 @@ router.post("/places/create", isAuthenticated, checkAdmin, (req, res, next) => {
     comments: [],
     continent,
     price,
+    isLiked: false,
   })
     .then((newPlace) => {
       console.log(newPlace);
