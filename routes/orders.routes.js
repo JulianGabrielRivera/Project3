@@ -6,14 +6,6 @@ const { isAuthenticated } = require("../middleware/jwt.middleware");
 const { DateTime } = require("luxon");
 const User = require("../models/User.model");
 
-// router.get("/saved-checkout", isAuthenticated, (req, res, next) => {
-//   User.findById(req.payload._id)
-//     .populate("cards")
-//     .then((cards) => {
-//       console.log(cards);
-//       res.json({ cards: cards });
-//     });
-// });
 router.post("/new-order", isAuthenticated, (req, res, next) => {
   // .find gets all the documents if we dont specify what we want.
   const {
@@ -25,13 +17,7 @@ router.post("/new-order", isAuthenticated, (req, res, next) => {
     zipCode,
     phoneNumber,
   } = req.body.addressObject;
-  const {
-    nameOnCard,
-    creditCard,
-    expirationMonth,
-    expirationYear,
-    securityCode,
-  } = req.body.paymentObject;
+
   //   console.log(req.body.cartItems);
   //   console.log(req.body.totalPrice);
   let currentDate = new Date();
