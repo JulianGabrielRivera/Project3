@@ -27,13 +27,11 @@ io.on("connection", (socket) => {
         time: data.time,
         message: data.message,
       });
-
-      socket.emit("all_chat", findAllofChat);
+      socket.emit("receive_message", data);
+      // socket.emit("all_chat", findAllofChat);
     } catch (error) {
       console.log(error);
     }
-
-    socket.emit("receive_message", data);
   });
   //   leaving tab or disconnecting from server
   socket.on("disconnect", () => {
